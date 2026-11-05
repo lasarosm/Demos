@@ -16,6 +16,11 @@ table 'Key Measures'
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Sales
 
+	/// Count of sales rows in the current filter context, such as the selected date.
+	measure Orders = COUNTROWS ( Sales )
+		formatString: #,##0
+		displayFolder: Sales
+
 	column Value
 		isNameInferred
 		sourceColumn: [Value]
